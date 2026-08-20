@@ -1,0 +1,39 @@
+<section class="hero section-pad">
+  <div class="container hero-grid">
+    <div>
+      <p class="eyebrow">Full Stack Developer / Analista de Sistemas</p>
+      <h1>Construyo soluciones que ordenan lo complejo.</h1>
+      <p class="hero-copy">Soy Felipe Acevedo Agudelo, desarrollador Full Stack de Medellin. Uno la mirada tecnica del backend con la comprension de los procesos que hacen que un sistema realmente sea util.</p>
+      <div class="hero-actions"><a href="#contacto" class="btn btn-primary">Hablemos de tu proyecto</a><a href="#experiencia" class="btn btn-secondary">Conocer mi trayectoria</a></div>
+      <div class="hero-meta" aria-label="Datos de contacto"><span>Medellin, Colombia</span><a href="mailto:felipe20015@gmail.com">felipe20015@gmail.com</a></div>
+    </div>
+    <aside class="hero-card" aria-label="Resumen profesional">
+      <div class="hero-card-mark">FA</div><p class="card-kicker">Perfil profesional</p><h2>Codigo con contexto.</h2>
+      <p>Backend, datos y procesos alineados para crear productos mantenibles y seguros.</p>
+      <ul><li>Node.js + Express</li><li>MySQL, PostgreSQL + MongoDB</li><li>APIs REST, MVC + Git</li></ul>
+    </aside>
+  </div>
+</section>
+<section class="section-pad" id="sobre-mi" aria-labelledby="sobre-mi-title"><div class="container about-grid"><div><p class="eyebrow">Una mirada mas completa</p><h2 id="sobre-mi-title">Tecnologia que entiende el negocio.</h2></div><div><p>Mi experiencia combina desarrollo de software, analisis de informacion y apoyo a procesos administrativos y tecnologicos en entidades publicas y privadas.</p><p>Tambien he llevado este conocimiento al aula como docente universitario. Me interesa crear sistemas claros, confiables y faciles de evolucionar.</p></div></div></section>
+<section class="section-pad surface" id="habilidades" aria-labelledby="habilidades-title"><div class="container"><div class="section-heading"><p class="eyebrow">Toolkit</p><h2 id="habilidades-title">Herramientas para resolver.</h2></div><div class="cards-grid">
+  <article class="card"><span class="card-number">01</span><h3>Desarrollo</h3><p>JavaScript, Node.js, Express, HTML, CSS y React para experiencias web completas.</p></article>
+  <article class="card"><span class="card-number">02</span><h3>Datos</h3><p>SQL, MySQL, PostgreSQL y MongoDB para modelar y consultar informacion con criterio.</p></article>
+  <article class="card"><span class="card-number">03</span><h3>Arquitectura</h3><p>MVC, APIs REST, sesiones y JWT para construir soluciones organizadas y seguras.</p></article>
+  <article class="card"><span class="card-number">04</span><h3>Colaboracion</h3><p>Git y GitHub para trabajar con trazabilidad, documentacion y entregas consistentes.</p></article>
+</div></div></section>
+<section class="section-pad" id="experiencia" aria-labelledby="experiencia-title"><div class="container"><div class="section-heading split-heading"><div><p class="eyebrow">Trayectoria</p><h2 id="experiencia-title">Experiencia que suma perspectivas.</h2></div><p>Desarrollo, analisis, servicio publico y docencia en una misma trayectoria.</p></div><div class="timeline">
+  <article class="timeline-item"><span class="timeline-year">2025</span><div><h3>Docente de pregrado</h3><p>Politecnico Colombiano Jaime Isaza Cadavid</p></div></article>
+  <article class="timeline-item"><span class="timeline-year">2023 - 2024</span><div><h3>Analista de Informacion Administrativa - Tecnologia</h3><p>Comware S.A.</p></div></article>
+  <article class="timeline-item"><span class="timeline-year">2022 - 2023</span><div><h3>Prestacion de servicios</h3><p>Instituto Tecnologico Metropolitano</p></div></article>
+  <article class="timeline-item"><span class="timeline-year">2022 - 2024</span><div><h3>Aprendiz practicante</h3><p>Alcaldia de Medellin y Politecnico Colombiano Jaime Isaza Cadavid</p></div></article>
+</div></div></section>
+<section class="section-pad surface" id="formacion" aria-labelledby="formacion-title"><div class="container education-grid"><div><p class="eyebrow">Formacion</p><h2 id="formacion-title">Aprender para construir mejor.</h2></div><div class="education-list">
+  <p><strong>Tecnologia en Sistematizacion de Datos</strong><span>En curso</span></p><p><strong>Tecnico Profesional en Programacion de Sistemas de Informacion</strong><span>2025</span></p><p><strong>Diplomado en Docencia Universitaria</strong><span>120 horas · 2025</span></p><p><strong>Tecnico en Programacion de Software</strong><span>2022</span></p>
+</div></div></section>
+<section class="section-pad" id="contacto" aria-labelledby="contacto-title"><div class="container contact-wrap"><div><p class="eyebrow">Disponible para nuevos retos</p><h2 id="contacto-title">Hagamos algo que valga la pena.</h2><p>Si buscas un desarrollador para tu equipo o proyecto, escribeme y conversemos.</p></div><form id="contact-form" class="contact-form" action="/contact" method="post" novalidate>
+  {{#if formSuccess}}<p class="alert alert-success" role="status">{{formSuccess}}</p>{{/if}}{{#if formError}}<p class="alert alert-error" role="alert">{{formError}}</p>{{/if}}{{#if formErrors}}<div class="alert alert-error" role="alert"><ul>{{#each formErrors}}<li>{{this}}</li>{{/each}}</ul></div>{{/if}}
+  <label for="name">Nombre</label><input id="name" name="name" type="text" minlength="2" required value="{{oldInput.name}}" aria-required="true" />
+  <label for="email">Correo electronico</label><input id="email" name="email" type="email" required value="{{oldInput.email}}" aria-required="true" />
+  <label for="message">Mensaje</label><textarea id="message" name="message" minlength="10" rows="5" required aria-required="true">{{oldInput.message}}</textarea>
+  <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+</form></div></section>
