@@ -1,13 +1,19 @@
-FROM node:lts-alpin
+FROM node:lts-alpine
 
 WORKDIR /app
 
 
 COPY package.json .
 
-RUN npm install
+RUN npm ci
 
 COPY . .
+
+ENV NODE_ENV production
+
+ENV PORT 3000
+
+
 
 EXPOSE 3000
 

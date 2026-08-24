@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+	app:
+		build:
+			context: https://github.com/felipeacevedo23162/landing.git
+		container_name: landing-app
+		ports:
+			- "3000:3000"
+		environment:
+			NODE_ENV: production
+			PORT: 3000
+			DB_HOST: db
+			DB_PORT: 3306
+			DB_USER: root
+			DB_PASSWORD: ${DB_PASSWORD:-landing_root_password}
+			DB_NAME: portfolio
+		restart: unless-stopped
+    networks:
+      - appnet
+networks:
+  appnet:
