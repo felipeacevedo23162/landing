@@ -1,21 +1,28 @@
 version: "3.9"
+
 services:
-	app:
-		build:
-			context: https://github.com/felipeacevedo23162/landing.git
-		container_name: landing-app
-		ports:
-			- "3000:3000"
-		environment:
-			NODE_ENV: production
-			PORT: 3000
-			DB_HOST: mariadb
-			DB_PORT: 3306
-			DB_USER: portfolio
-			DB_PASSWORD: d4JQ0fy6wQlaXl0F
-			DB_NAME: portfolio
-		restart: unless-stopped
+  app:
+    build:
+      context: https://github.com/felipeacevedo23162/landing.git
+
+    container_name: landing-app
+
+    ports:
+      - "3000:3000"
+
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      DB_HOST: mariadb
+      DB_PORT: 3306
+      DB_USER: portfolio
+      DB_PASSWORD: d4JQ0fy6wQlaXl0F
+      DB_NAME: portfolio
+
+    restart: unless-stopped
+
     networks:
       - appnet
+
 networks:
   appnet:
