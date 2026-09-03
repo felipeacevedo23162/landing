@@ -53,7 +53,7 @@ SOURCE database.sql;
 
 ```env
 PORT=3000
-SITE_URL=http://localhost:3000
+SITE_URL=https://soyelpipeaa.com
 DB_HOST=localhost
 DB_PORT=3306
 DB_USER=root
@@ -84,6 +84,8 @@ http://localhost:3000
 ## Rutas
 
 - `GET /` renderiza la landing
+- `GET /robots.txt` permite el rastreo y referencia el sitemap publico
+- `GET /sitemap.xml` publica la URL canónica de la landing
 - `POST /contact` valida y guarda mensajes en MariaDB
 
 ## Caracteristicas incluidas

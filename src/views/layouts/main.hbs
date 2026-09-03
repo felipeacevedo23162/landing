@@ -8,7 +8,9 @@
     <meta name="keywords" content="{{seo.keywords}}" />
     <meta name="author" content="{{seo.author}}" />
     <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="googlebot" content="index, follow, max-image-preview:large" />
     <meta name="theme-color" content="#184c3b" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <link rel="canonical" href="{{seo.canonical}}" />
 
     <meta property="og:title" content="{{seo.ogTitle}}" />
@@ -22,6 +24,7 @@
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="{{seo.ogTitle}}" />
     <meta name="twitter:description" content="{{seo.ogDescription}}" />
+    {{#if seo.twitterCreator}}<meta name="twitter:creator" content="{{seo.twitterCreator}}" />{{/if}}
     <script type="application/ld+json">{{{json structuredData}}}</script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
